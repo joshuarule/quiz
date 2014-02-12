@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/app.css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <ol class="questions">
+        <li class="question js-show">
+          <h2>What is 1 + 1?</h2>
+          <ol class="options">
+            <li class="option">
+              <input type="radio" name="question-1" id="opt-1-1" />
+              <label for="opt-1-1">2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-1" id="opt-2-1" />
+              <label for="opt-2-1">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-1" id="opt-3-1" />
+              <label for="opt-3-1">3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-1" id="opt-4-1" />
+              <label for="opt-4-1">4</label>
+            </li>
+            <div class="cf"></div>
+          </ol>
+        </li>
+        <li class="question">
+          <h2>What is 4 * 4?</h2>
+          <ol class="options">
+            <li class="option">
+              <input type="radio" name="question-2" id="opt-1-2" />
+              <label for="opt-1-2">24</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-2" id="opt-2-2" />
+              <label for="opt-2-2">16</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-2" id="opt-3-2" />
+              <label for="opt-3-2">14</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-2" id="opt-4-2" />
+              <label for="opt-4-2">18</label>
+            </li>
+            <div class="cf"></div>
+          </ol>
+        </li>
+        <li class="question">
+          <h2>What year was United States gain Independance?</h2>
+          <ol class="options">
+            <li class="option">
+              <input type="radio" name="question-3" id="opt-1-3" />
+              <label for="opt-1-3">1786</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-3" id="opt-2-3" />
+              <label for="opt-2-3">1876</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-3" id="opt-3-3" />
+              <label for="opt-3-3">1776</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-3" id="opt-4-3" />
+              <label for="opt-4-3">1667</label>
+            </li>
+            <div class="cf"></div>
+          </ol>
+        </li>
+        <li class="question">
+          <h2>What is the 2nd largest city in the United States?</h2>
+          <ol class="options">
+            <li class="option">
+              <input type="radio" name="question-4" id="opt-1-4" />
+              <label for="opt-1-4">Chicago</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-4" id="opt-2-4" />
+              <label for="opt-2-4">San Francisco</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-4" id="opt-3-4" />
+              <label for="opt-3-4">New York</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-4" id="opt-4-4" />
+              <label for="opt-4-4">Los Angeles</label>
+            </li>
+            <div class="cf"></div>
+          </ol>
+        </li>
+        <li class="question">
+          <h2>How many strings does a standard guitar have?</h2>
+          <ol class="options">
+            <li class="option">
+              <input type="radio" name="question-5" id="opt-1-5" />
+              <label for="opt-1-5">6</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-5" id="opt-2-5" />
+              <label for="opt-2-5">7</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-5" id="opt-3-5" />
+              <label for="opt-3-5">4</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="question-5" id="opt-4-5" />
+              <label for="opt-4-5">3</label>
+            </li>
+            <div class="cf"></div>
+          </ol>
+        </li>
+      </ol>
+      <!-- <div class="final">
+        <h2>Congrats</h2>
+      </div> -->
+      <button>Submit</button>
+      <span class="score">Score: <b>0</b> </span>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

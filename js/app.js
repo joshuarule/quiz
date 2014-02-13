@@ -3,8 +3,9 @@ var q1a, q2a, q3a, q4a, q5a, question, score, currentQ;
 
 $(document).ready(function() {
 
-  // sets correct answer
-  // 0 = first option
+  // sets correct answer for each question
+  // q0a = first question
+  // 0   = first option
   q0a = 0;
   q1a = 1;
   q2a = 2;
@@ -30,6 +31,8 @@ $(document).ready(function() {
     return ".question:eq("+question+")";
   }
 
+  // Go to next question
+
   function next() {
     $(currentQuestion()).toggleClass('js-show');
     question +=1;
@@ -38,10 +41,14 @@ $(document).ready(function() {
     $('button').removeClass('active');
   }
 
+  // update score
+
   function updateScore() {
     $(".score b").text(score);
     console.log("score updated");
   }
+
+  // correct answer
 
   function correctAnswer() {
     console.log('correct answer');
@@ -56,6 +63,7 @@ $(document).ready(function() {
     });
   }
 
+  // incorrect answer
 
   function incorrectAnswer() {
     console.log('incorrect answer');
@@ -68,6 +76,8 @@ $(document).ready(function() {
       };
     });
   }
+
+  // check answer based on which question
 
   function checkAnswer() {
     if($(currentQuestion() + ' input').is(':checked')) {
@@ -116,8 +126,6 @@ $(document).ready(function() {
     }
     console.log(score);
   };
-
-
 
   $("button").click(function(){
     checkAnswer();

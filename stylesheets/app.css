@@ -126,9 +126,14 @@ button.active {
   position: relative;
   min-height: 120px;
   margin-bottom: 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* line 55, ../sass/app.scss */
+/* line 56, ../sass/app.scss */
 .question {
   position: absolute;
   margin-bottom: 30px;
@@ -146,18 +151,18 @@ button.active {
   -o-transition: -o-transform, 1s;
   transition: transform, 1s;
 }
-/* line 64, ../sass/app.scss */
+/* line 65, ../sass/app.scss */
 .question h2 {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* line 71, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .options {
   position: relative;
 }
 
-/* line 77, ../sass/app.scss */
+/* line 78, ../sass/app.scss */
 .error,
 .correct,
 .incorrect {
@@ -174,28 +179,28 @@ button.active {
   bottom: 2px;
 }
 
-/* line 92, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .correct,
 .incorrect {
   color: #FFF;
 }
 
-/* line 96, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .correct {
   background: rgba(0, 128, 0, 0.93);
 }
 
-/* line 100, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .incorrect {
   background: rgba(255, 0, 0, 0.93);
 }
 
-/* line 104, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .error {
   color: red;
 }
 
-/* line 108, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 .option {
   width: 50%;
   float: left;
@@ -204,14 +209,14 @@ button.active {
   height: 40px;
 }
 
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 input[type="radio"] {
   position: absolute;
   opacity: 0;
   border: 0;
 }
 
-/* line 122, ../sass/app.scss */
+/* line 123, ../sass/app.scss */
 input + label {
   text-align: center;
   background: #CCC;
@@ -219,22 +224,22 @@ input + label {
   display: block;
   line-height: 36px;
 }
-/* line 129, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 input + label:hover {
   background: #e5e600;
 }
 
-/* line 134, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 input:checked + label {
   background: yellow;
 }
 
-/* line 138, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 .score {
   float: right;
 }
 
-/* line 142, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 .js-show {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;

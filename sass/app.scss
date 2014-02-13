@@ -3,6 +3,10 @@
 
 .cf {clear: both;}
 
+* {
+  @include box-sizing(border-box);
+}
+
 body {
   font-family: 'Merriweather', serif;
 }
@@ -17,22 +21,35 @@ h2 {
   margin: 20px auto;
 }
 
+.center {
+  text-align: center;
+}
+
 button {
   border: 0;
   outline: 0;
-  background: black;
-  color: #FFF;
+  background: rgba(#000, 0);
+  color: #000;
   font-size: 18px;
   padding: 5px 10px;
+  margin-bottom: 10px;
+  
+  @include transition(all, .5s);
 
   &:active {
     background: grey;
+  }
+
+  &.active {
+    background: rgba(#000, 1);
+    color: #FFF;
   }
 }
 
 .questions {
   position: relative;
-  min-height: 120px
+  min-height: 120px;
+  margin-bottom: 10px;
 }
 
 .question {
@@ -41,7 +58,7 @@ button {
   left:  0;
   right: 0;
   @include opacity(0);
-  @include transform(translatex(100%) scale(0.5) rotateY(90deg));
+  @include transform(translatex(700px) perspective(2000) rotateY(90deg));
   @include transition(transform, 1s);
 
   h2 {
@@ -53,7 +70,6 @@ button {
 
 .options {
   position: relative;
-  xoutline: 1px solid blue;
 }
 
 .error,
@@ -61,13 +77,28 @@ button {
 .incorrect {
   text-align: center;
   background: rgba(#FFF, .93);
-  line-height: 60px;
+  line-height: 80px;
   font-size: 18px;
   font-weight: bold;
   position: absolute;
-  width: 100%;
-  height: 100%;
   z-index: 1;
+  left:   2px;
+  right:  2px;
+  top:    2px;
+  bottom: 2px;
+}
+
+.correct,
+.incorrect {
+  color: #FFF;
+}
+
+.correct {
+  background: rgba(green, .93);
+}
+
+.incorrect {
+  background: rgba(red, .93);
 }
 
 .error {
@@ -78,31 +109,37 @@ button {
   width: 50%;
   float: left;
   position: relative;
-  outline: 1px solid black;
-  height: 30px;
+  padding: 2px;
+  height: 40px;
 }
 
 input[type="radio"] {
   position: absolute;
   opacity: 0;
   border: 0;
-  outline: 1px solid green;
 }
 
 input + label {
   text-align: center;
-  background: yellow;
-  position: absolute;
+  background: #CCC;
   height: 100%;
-  width: 100%;
-  line-height: 30px;
+  display: block;
+  line-height: 36px;
+
+  &:hover {
+    background: darken(yellow, 5%);
+  }
 }
 
 input:checked + label {
-  background: red;
+  background: yellow;
+}
+
+.score {
+  float: right;
 }
 
 .js-show {
   @include opacity(1);
-  @include translateX(0em);
+  @include transform(translatex(0px) rotateY(0deg));
 }

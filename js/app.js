@@ -12,12 +12,20 @@ $(document).ready(function() {
   q3a = 3;
   q4a = 0;
 
+  var questions = 5;
+
   question = 0;
   score = 0;
 
   var error =     "<div class='error'> Please select an answer</div>";
   var correct =   "<div class='result correct'>Correct!</div>";
   var incorrect = "<div class='result incorrect'>Incorrect!</div>";
+
+  // calculate score
+
+  function finalScore() {
+    return (score / questions) * 100;
+  }
 
   // make submit button green when option selected
 
@@ -34,7 +42,7 @@ $(document).ready(function() {
   // Go to next question
 
   function next() {
-    $(currentQuestion()).toggleClass('js-show');
+    $(currentQuestion()).toggleClass('js-answered');
     question +=1;
     $(currentQuestion()).toggleClass('js-show');
     console.log("question#: " + question);
@@ -59,6 +67,10 @@ $(document).ready(function() {
         $('.correct').remove();
         next();
         updateScore();
+
+        if (question === 5) {
+          $('button').fadeOut(300);
+        }
       };
     });
   }
@@ -115,7 +127,8 @@ $(document).ready(function() {
         } else {
           incorrectAnswer();
         }
-      }
+        $('.final b').text(finalScore() + " %");
+      } 
     } else {
       // displays error
       $(error).prependTo($('.options')).hide().fadeIn(300);
@@ -127,8 +140,17 @@ $(document).ready(function() {
     console.log(score);
   };
 
+  // submit answer
+
   $("button").click(function(){
     checkAnswer();
-  })
+  });
+
+  $(document).keypress(function(e){
+    console.log(e.which);
+    if (e.which === 13) {
+      checkAnswer();
+    }
+  });
 
 })

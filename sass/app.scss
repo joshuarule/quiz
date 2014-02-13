@@ -8,7 +8,13 @@
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'helvetica neue', sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.2em;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -59,8 +65,11 @@ button {
   left:  0;
   right: 0;
   @include opacity(0);
-  @include transform(translatex(700px) perspective(2000) rotateY(90deg));
-  @include transition(transform, 1s);
+  @include transform(scale(.4) perspective(800) rotateY(180deg));
+  @include transition(transform, 1.2s);
+  @include transition-timing-function(ease);
+  // @include perspective( 1000 );
+  @include transform-origin( 50%, 50%, -400px );
 
   h2 {
     text-align: center;
@@ -140,7 +149,18 @@ input:checked + label {
   float: right;
 }
 
+.final b {
+  margin-top: 10px;
+  font-size: 44px;
+  display: block;
+}
+
 .js-show {
   @include opacity(1);
-  @include transform(translatex(0px) rotateY(0deg));
+  @include transform(scale(1) rotateY(0deg));
+}
+
+.js-answered {
+  @include opacity(0);
+  @include transform(scale(.4) rotateY(-180deg));
 }

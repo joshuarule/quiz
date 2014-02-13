@@ -77,27 +77,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 10, ../sass/app.scss */
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'helvetica neue', sans-serif;
 }
 
 /* line 14, ../sass/app.scss */
+h1 {
+  font-size: 24px;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* line 20, ../sass/app.scss */
 h2 {
   font-size: 22px;
   line-height: 1.2em;
 }
 
-/* line 19, ../sass/app.scss */
+/* line 25, ../sass/app.scss */
 .container {
   max-width: 700px;
   margin: 20px auto;
 }
 
-/* line 24, ../sass/app.scss */
+/* line 30, ../sass/app.scss */
 .center {
   text-align: center;
 }
 
-/* line 28, ../sass/app.scss */
+/* line 34, ../sass/app.scss */
 button {
   border: 0;
   outline: 0;
@@ -111,17 +118,17 @@ button {
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
 }
-/* line 39, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 button:active {
   background: grey;
 }
-/* line 43, ../sass/app.scss */
+/* line 49, ../sass/app.scss */
 button.active {
   background: black;
   color: #FFF;
 }
 
-/* line 49, ../sass/app.scss */
+/* line 55, ../sass/app.scss */
 .questions {
   position: relative;
   min-height: 120px;
@@ -133,7 +140,7 @@ button.active {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 56, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .question {
   position: absolute;
   margin-bottom: 30px;
@@ -141,28 +148,37 @@ button.active {
   right: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: translatex(700px) perspective(2000) rotateY(90deg);
-  -moz-transform: translatex(700px) perspective(2000) rotateY(90deg);
-  -ms-transform: translatex(700px) perspective(2000) rotateY(90deg);
-  -o-transform: translatex(700px) perspective(2000) rotateY(90deg);
-  transform: translatex(700px) perspective(2000) rotateY(90deg);
-  -webkit-transition: -webkit-transform, 1s;
-  -moz-transition: -moz-transform, 1s;
-  -o-transition: -o-transform, 1s;
-  transition: transform, 1s;
+  -webkit-transform: scale(0.4) perspective(800) rotateY(180deg);
+  -moz-transform: scale(0.4) perspective(800) rotateY(180deg);
+  -ms-transform: scale(0.4) perspective(800) rotateY(180deg);
+  -o-transform: scale(0.4) perspective(800) rotateY(180deg);
+  transform: scale(0.4) perspective(800) rotateY(180deg);
+  -webkit-transition: -webkit-transform, 1.2s;
+  -moz-transition: -moz-transform, 1.2s;
+  -o-transition: -o-transform, 1.2s;
+  transition: transform, 1.2s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transform-origin: 50% 50% -400px;
+  -moz-transform-origin: 50% 50% -400px;
+  -ms-transform-origin: 50% 50% -400px;
+  -o-transform-origin: 50% 50% -400px;
+  transform-origin: 50% 50% -400px;
 }
-/* line 65, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .question h2 {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* line 72, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .options {
   position: relative;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 .error,
 .correct,
 .incorrect {
@@ -179,28 +195,28 @@ button.active {
   bottom: 2px;
 }
 
-/* line 93, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 .correct,
 .incorrect {
   color: #FFF;
 }
 
-/* line 97, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 .correct {
   background: rgba(0, 128, 0, 0.93);
 }
 
-/* line 101, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 .incorrect {
   background: rgba(255, 0, 0, 0.93);
 }
 
-/* line 105, ../sass/app.scss */
+/* line 114, ../sass/app.scss */
 .error {
   color: red;
 }
 
-/* line 109, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .option {
   width: 50%;
   float: left;
@@ -209,14 +225,14 @@ button.active {
   height: 40px;
 }
 
-/* line 117, ../sass/app.scss */
+/* line 126, ../sass/app.scss */
 input[type="radio"] {
   position: absolute;
   opacity: 0;
   border: 0;
 }
 
-/* line 123, ../sass/app.scss */
+/* line 132, ../sass/app.scss */
 input + label {
   text-align: center;
   background: #CCC;
@@ -224,28 +240,46 @@ input + label {
   display: block;
   line-height: 36px;
 }
-/* line 130, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 input + label:hover {
   background: #e5e600;
 }
 
-/* line 135, ../sass/app.scss */
+/* line 144, ../sass/app.scss */
 input:checked + label {
   background: yellow;
 }
 
-/* line 139, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 .score {
   float: right;
 }
 
-/* line 143, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
+.final b {
+  margin-top: 10px;
+  font-size: 44px;
+  display: block;
+}
+
+/* line 158, ../sass/app.scss */
 .js-show {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-  -webkit-transform: translatex(0px) rotateY(0deg);
-  -moz-transform: translatex(0px) rotateY(0deg);
-  -ms-transform: translatex(0px) rotateY(0deg);
-  -o-transform: translatex(0px) rotateY(0deg);
-  transform: translatex(0px) rotateY(0deg);
+  -webkit-transform: scale(1) rotateY(0deg);
+  -moz-transform: scale(1) rotateY(0deg);
+  -ms-transform: scale(1) rotateY(0deg);
+  -o-transform: scale(1) rotateY(0deg);
+  transform: scale(1) rotateY(0deg);
+}
+
+/* line 163, ../sass/app.scss */
+.js-answered {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transform: scale(0.4) rotateY(-180deg);
+  -moz-transform: scale(0.4) rotateY(-180deg);
+  -ms-transform: scale(0.4) rotateY(-180deg);
+  -o-transform: scale(0.4) rotateY(-180deg);
+  transform: scale(0.4) rotateY(-180deg);
 }

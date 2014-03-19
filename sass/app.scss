@@ -138,6 +138,7 @@ input + label {
 
   &:hover {
     background: darken(yellow, 5%);
+    cursor: pointer;
   }
 }
 
